@@ -8,7 +8,6 @@ import {
   Spinner,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Sidebar from "../components/sidebar";
 function Homepage() {
   const [contents, setContents] = useState([]);
   const [page, setPage] = useState(1);
@@ -38,7 +37,6 @@ function Homepage() {
 
   return (
     <Box p={4}>
-      <Sidebar />
       <VStack spacing={4} align="stretch">
         {contents.map((content) => (
           <Box
