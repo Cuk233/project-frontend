@@ -54,7 +54,7 @@ function Register() {
           isClosable: true,
         });
         setTimeout(() => {
-          navigate("/login");
+          navigate("/");
           setIsLoading(false);
         }, 2000);
       } else {
