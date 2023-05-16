@@ -23,7 +23,7 @@ function UserProfilePage() {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      setUserData(response.data.user_profile);
+      setUserData(response.data.user);
       console.log(response.data.result);
     };
 
@@ -39,9 +39,11 @@ function UserProfilePage() {
           src={`/images/profile/${userData.profile_pic}`}
         />
         <Text mt={4} fontSize="2xl">
-          John Doe
+          {userData.fullname}
         </Text>
-        <Text mt={2} color="gray.600"></Text>
+        <Text mt={2} color="gray.600">
+          {userData.username}
+        </Text>
       </Box>
 
       <Grid templateColumns="repeat(3, 1fr)" gap={4}>

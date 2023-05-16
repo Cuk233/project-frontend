@@ -29,6 +29,9 @@ function Login() {
     confirmPassword: "",
   });
 
+  const handleRegister = () => {
+    navigate("/register");
+  };
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -142,6 +145,17 @@ function Login() {
                   type="submit"
                 >
                   Login
+                </Button>
+                <Button
+                  bg={"green.400"}
+                  color={"white"}
+                  w="full"
+                  _hover={{
+                    color: "black",
+                  }}
+                  onClick={handleRegister}
+                >
+                  Register
                 </Button>
               </Stack>
             </form>
